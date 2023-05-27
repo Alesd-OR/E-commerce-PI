@@ -253,20 +253,23 @@ public class CadastroCliente extends javax.swing.JFrame {
         Cliente consumidor = new Cliente();
 
         if (valida.validarNome(nomeClie) && valida.validarCpf(cpfClie) && valida.validarEmail(emailClie) && valida.validarTelefone(telefoneClie)) {
-            
+
             consumidor.setNome(nomeClie);
             consumidor.setCpf(cpfClie);
             consumidor.setEmail(emailClie);
             consumidor.setEndereco(enderecoClie);
             consumidor.setGenero(generoClie);
             consumidor.setTelefone(telefoneClie);
-            
-            ClienteDAO.salvar(consumidor);
-            
-            new CadastroProduto().setVisible(true);
 
-            this.setVisible(false);
+            boolean retorno = ClienteDAO.salvar(consumidor);
 
+            if (retorno) {
+                new TelaInicial().setVisible(true);
+                this.setVisible(false);
+            } else {
+                JOptionPane.showMessageDialog(null, "Cliente não cadastrado, tente novamente", "Erro", JOptionPane.ERROR_MESSAGE);
+            }
+            
         }
 
     }//GEN-LAST:event_btnOkActionPerformed

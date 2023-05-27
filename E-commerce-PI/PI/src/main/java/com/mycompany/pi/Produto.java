@@ -12,7 +12,35 @@ public class Produto {
     private String id;
     private String nomeProduto;
     private String quantidade;
-    private String valorProduto;
+    private Float valorProduto;
+    private String descricao;
+    private String categoria;
+    private String validade;
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+    
+    public String getValidade() {
+        return validade;
+    }
+
+    public void setValidade(String validade) {
+        this.validade = validade;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+    
 
     public String getId() {
         return id;
@@ -38,12 +66,12 @@ public class Produto {
         this.quantidade = quantidade;
     }
 
-    public String getValorProduto() {
+    public Float getValorProduto() {
         return valorProduto;
     }
 
     public void setValorProduto(String valorProduto) {
-        this.valorProduto = valorProduto;
+        this.valorProduto = Float.parseFloat(valorProduto);
     }
     
      
