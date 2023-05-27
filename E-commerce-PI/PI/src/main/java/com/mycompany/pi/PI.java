@@ -4,6 +4,9 @@
 
 package com.mycompany.pi;
 
+import java.util.Locale;
+import validadores.Validadores;
+import telaInicial.TelaInicial;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -15,6 +18,9 @@ import javax.swing.UnsupportedLookAndFeelException;
 public class PI extends Validadores {
 
     public static void main(String[] args) {
+        
+        
+        
 
         for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager
                 .getInstalledLookAndFeels()) {

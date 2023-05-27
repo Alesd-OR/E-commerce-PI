@@ -1,11 +1,12 @@
 create database JavaMarketBD;
 use JavaMarketBD;
 
+
 create table cliente (
 id_cliente int primary key auto_increment,
 nomeClie varchar(40) not null,
 genero varchar(40),
-cpf varchar(40) unique not null,
+cpf varchar(40) not null unique,
 email varchar(40) not null,
 endereco varchar(80) not null,
 telefone varchar(40) not null);
@@ -15,6 +16,7 @@ id_produto int primary key auto_increment,
 nomeProd varchar(40) unique not null, 
 descProd varchar (40), 
 catProd varchar(40) not null, 
+validadeProd varchar(40),
 qtdProd int not null, 
 valProd decimal(10,2));
 

@@ -4,7 +4,7 @@
  */
 package telaRelatoriosDAO;
 
-import com.mycompany.pi.Cliente;
+import classeCliente.Cliente;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -24,10 +24,10 @@ public class RelatoriosDAO {
         try {
             //Passo 1 - Carregaro o Driver
             Class.forName("com.mysql.cj.jdbc.Driver");
-            String url = "jdbc:mysql://127.0.0.1:3306/javamarketbd";
+            String url = "jdbc:mysql://localhost:3306/javamarketbd";
             
             //Passo 2 - Abrir a conexao
-            conexao = DriverManager.getConnection(url, "root", "");
+            conexao = DriverManager.getConnection(url, "root", "admin");
             
             //Passo 3 - Prepara o comando SQL
             PreparedStatement comandoSQL = conexao.prepareStatement("INSERT INTO cliente "
